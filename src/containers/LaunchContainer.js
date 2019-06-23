@@ -26,13 +26,11 @@ class LaunchContainer extends Component {
   }
 
   handleSelectedYear(year) {
-    const selectedYear = this.state.spaceLaunches.find((launchObject) => {
-      // console.log('object', launchObject);
+    const foundYear = this.state.spaceLaunches.find((launchObject) => {
       return launchObject.launch_year === year;
     });
-    console.log(selectedYear);
-    return selectedYear;
-    this.setState({ selectedYear: selectedYear });
+    console.log(foundYear);
+    this.setState({ selectedYear: foundYear });
 
   }
 
