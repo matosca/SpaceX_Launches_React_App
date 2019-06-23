@@ -8,7 +8,6 @@ class Launch extends Component {
     const dateLaunchFormatted = formattedDate.toLocaleString("en-GB", options)
     // console.log(formattedDate.toLocaleString('en-GB', options));
 
-
     return(
       <div className="launch-item">
         <h2>#{this.props.flightNumber}</h2>
