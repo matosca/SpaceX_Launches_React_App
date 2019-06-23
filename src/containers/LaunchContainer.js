@@ -18,7 +18,7 @@ class LaunchContainer extends Component {
       .then(response => {
         const launchesData = response.data;
         this.setState({
-          spaceLaunches: launchesData
+          spaceLaunches: launchesData, launchYears: launchesData
         });
         // console.log(response);
       });
@@ -27,13 +27,17 @@ class LaunchContainer extends Component {
 
 
 
-
-
   render () {
+    const years = this.state.launchYears.map(launch => launch.launch_year);
+    // console.log(years);
+    const uniqueYears = years.filter((value, index, self) => {
+      return self.indexOf(value) === index;
+    });
+    console.log(uniqueYears);
     return (
       <div className="container">
         <h1>Launches</h1>
-        <LaunchSelect spaceLaunches={ this.state.spaceLaunches}/>
+        <LaunchSelect uniqueLaunchYears={ uniqueYears }/>
         <LaunchList spaceLaunches={ this.state.spaceLaunches }/>
       </div>
     );
