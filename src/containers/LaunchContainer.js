@@ -9,7 +9,8 @@ class LaunchContainer extends Component {
     super(props);
     this.state = {
       spaceLaunches: [],
-      launchYears: []
+      launchYears: [],
+      selectedYear: null
     };
   }
 
@@ -24,6 +25,16 @@ class LaunchContainer extends Component {
       });
   }
 
+  handleSelectedYear(year) {
+    const selectedYear = this.state.spaceLaunches.find((launchObject) => {
+      // console.log('object', launchObject);
+      return launchObject.launch_year === year;
+    });
+    console.log(selectedYear);
+    return selectedYear;
+    this.setState({ selectedYear: selectedYear });
+
+  }
 
 
 
@@ -37,7 +48,9 @@ class LaunchContainer extends Component {
     return (
       <div className="container">
         <h1>Launches</h1>
-        <LaunchSelect uniqueLaunchYears={ uniqueYears }/>
+        <LaunchSelect
+        uniqueLaunchYears={ uniqueYears }
+        onYearSelected={this.handleSelectedYear.bind(this)}/>
         <LaunchList spaceLaunches={ this.state.spaceLaunches }/>
       </div>
     );
