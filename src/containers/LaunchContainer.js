@@ -10,7 +10,7 @@ class LaunchContainer extends Component {
     this.state = {
       spaceLaunches: [],
       launchYears: [],
-      selectedYear: null
+      selectedLaunchObjects: []
     };
   }
 
@@ -26,12 +26,15 @@ class LaunchContainer extends Component {
   }
 
   handleSelectedYear(year) {
-    const foundYear = this.state.spaceLaunches.find((launchObject) => {
-      return launchObject.launch_year === year;
-    });
-    console.log(foundYear);
-    this.setState({ selectedYear: foundYear });
-
+    const newSpaceLaunchesObjects = [];
+    this.state.spaceLaunches.forEach( (launchObject) => {
+     if (launchObject.launch_year === year.toString()) {
+       newSpaceLaunchesObjects.push(launchObject);
+     }
+     // console.log("selected objects by year",newSpaceLaunchesObjects);
+     return newSpaceLaunchesObjects;
+   });
+   this.setState({ selectedLaunchObjects: newSpaceLaunchesObjects });
   }
 
 
@@ -42,14 +45,15 @@ class LaunchContainer extends Component {
     const uniqueYears = years.filter((value, index, self) => {
       return self.indexOf(value) === index;
     });
-    console.log(uniqueYears);
+    // console.log(uniqueYears);
     return (
       <div className="container">
         <h1>Launches</h1>
         <LaunchSelect
         uniqueLaunchYears={ uniqueYears }
         onYearSelected={this.handleSelectedYear.bind(this)}/>
-        <LaunchList spaceLaunches={ this.state.spaceLaunches }/>
+        <LaunchList spaceLaunches={ this.state.spaceLaunches }
+        selectedSpaceLaunches= {this.state.selectedLaunchObjects}/>
       </div>
     );
   }
