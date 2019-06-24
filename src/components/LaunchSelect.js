@@ -19,16 +19,12 @@ class LaunchSelect extends Component {
 
 
     return (
-      <div className="wrapper">
-
       <select
         className="launch-selector"
         onChange={(evt) => this.handleSelectChange(evt)}>
         <option value="Filter by Year">Filter by Year</option>
           {options}
       </select>
-
-      </div>
     );
   }
 }

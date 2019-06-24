@@ -9,7 +9,8 @@ class LaunchContainer extends Component {
     super(props);
     this.state = {
       spaceLaunches: [],
-      selectedLaunchObjects: []
+      selectedLaunchObjects: [],
+      descending: false
     };
   }
 
@@ -36,7 +37,7 @@ class LaunchContainer extends Component {
    this.setState({ selectedLaunchObjects: newSpaceLaunchesObjects });
   }
 
-  handleClick() {
+  handleReloadClick() {
     console.log("click");
     axios.get('https://api.spacexdata.com/v3/launches')
       .then(response => {
@@ -48,11 +49,22 @@ class LaunchContainer extends Component {
       });
   }
 
-
+  handleSortClick() {
+    console.log('click for sorting');
+    const data = this.state.spaceLaunches;
+      const newDataSorted = data.sort(function(object1, object2) {
+        return object1.launch_date_utc - object2.launch_date_utc;
+      });
+      newDataSorted.reverse()
+      this.setState({
+        spaceLaunches: newDataSorted,
+        descending: !this.state.descending
+      });
+  }
 
   render () {
-    console.log("render");
-    
+    // console.log("render");
+
     const years = this.state.spaceLaunches.map(launch => launch.launch_year);
     // console.log(years);
     const uniqueYears = years.filter((value, index, self) => {
@@ -63,7 +75,8 @@ class LaunchContainer extends Component {
     return (
       <div className="container">
         <h1>Launches</h1>
-        <button onClick={this.handleClick.bind(this)}>Reload</button>
+        <button onClick={this.handleReloadClick.bind(this)}>Reload</button>
+        <button onClick={this.handleSortClick.bind(this)}>Sort</button>
         <LaunchSelect
         uniqueLaunchYears={ uniqueYears }
         onYearSelected={this.handleSelectedYear.bind(this)}/>
