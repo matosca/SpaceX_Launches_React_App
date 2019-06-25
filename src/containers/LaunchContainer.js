@@ -100,7 +100,7 @@ class LaunchContainer extends Component {
       <div className="container">
         <h1>Launches</h1>
         <button onClick={this.handleReloadClick.bind(this)}>Reload</button>
-        <button onClick={this.handleSortClick.bind(this)}>Sort</button>
+        <button onClick={this.handleSortClick.bind(this)}>Sort {this.state.descending ? "ascending" : "descending"}</button>
         <LaunchSelect
         uniqueLaunchYears={ this.state.yearsInteval }
         onYearSelected={this.handleSelectedYear.bind(this)}/>
