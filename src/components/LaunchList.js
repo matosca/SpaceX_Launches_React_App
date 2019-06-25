@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Launch from '../components/Launch';
 import './LaunchList.css';
+import LaunchLoader from '../components/LaunchLoader';
 
 class LaunchList extends Component {
   render() {

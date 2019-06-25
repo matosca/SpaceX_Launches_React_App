@@ -105,7 +105,7 @@ class LaunchContainer extends Component {
         uniqueLaunchYears={ this.state.yearsInteval }
         onYearSelected={this.handleSelectedYear.bind(this)}/>
         <LaunchList
-        spaceLaunches={ this.state.spaceLaunches }
+        loading={this.state.loading}
         selectedSpaceLaunches= {this.state.selectedLaunchObjects}/>
       </div>
     );
