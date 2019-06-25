@@ -3,6 +3,7 @@ import axios from 'axios';
 import LaunchList from '../components/LaunchList';
 import LaunchSelect from '../components/LaunchSelect';
 import ReloadButton from '../components/ReloadButton';
+import SortButton from '../components/SortButton';
 
 class LaunchContainer extends Component {
 
@@ -100,7 +101,9 @@ class LaunchContainer extends Component {
       <div className="container">
         <h1>Launches</h1>
         <ReloadButton onClick={this.handleReloadClick.bind(this)}/>
-        <button onClick={this.handleSortClick.bind(this)}>Sort {this.state.descending ? "ascending" : "descending"}</button>
+        <SortButton
+        onClick={this.handleSortClick.bind(this)}
+        updatingContent={this.state.descending ? "Ascending" : "Descending"}/>
         <LaunchSelect
         uniqueLaunchYears={ this.state.yearsInteval }
         onYearSelected={this.handleSelectedYear.bind(this)}/>

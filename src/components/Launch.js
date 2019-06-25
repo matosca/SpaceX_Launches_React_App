@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Launch.css';
 
 class Launch extends Component {
+  
   render () {
     const formattedDate = new Date(this.props.launchDate);
     const options = { day: "2-digit", month: "short", year: "numeric"}

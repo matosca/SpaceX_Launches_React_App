@@ -9,7 +9,6 @@ class LaunchSelect extends Component {
   }
 
   render() {
-
     const options = this.props.uniqueLaunchYears.map((year, index) => {
       return <option value={year} key={index}>{year}</option>
     });
