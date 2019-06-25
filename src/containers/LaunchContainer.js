@@ -84,16 +84,14 @@ class LaunchContainer extends Component {
 
 
   handleSortClick() {
-    console.log('click for sorting');
-    const data = this.state.spaceLaunches;
-      const newDataSorted = data.sort(function(object1, object2) {
-        return object1.launch_date_utc - object2.launch_date_utc;
-      });
-      newDataSorted.reverse()
-      this.setState({
+    let newDataSorted = this.state.spaceLaunches.reverse();
+    this.setState(prevState => {
+      return {
         spaceLaunches: newDataSorted,
-        descending: !this.state.descending
-      });
+        selectedSpaceLaunches: newDataSorted,
+        descending: !prevState.descending
+      };
+    });
   }
 
   render () {
