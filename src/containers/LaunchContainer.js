@@ -66,14 +66,20 @@ class LaunchContainer extends Component {
 
   handleSelectedYear(year) {
     const newSpaceLaunchesObjects = [];
-    this.state.spaceLaunches.forEach( (launchObject) => {
-     if (launchObject.launch_year === year.toString()) {
-       newSpaceLaunchesObjects.push(launchObject);
-     }
-     // console.log("selected objects by year",newSpaceLaunchesObjects);
-     return newSpaceLaunchesObjects;
-   });
-   this.setState({ selectedLaunchObjects: newSpaceLaunchesObjects });
+
+    if (year.toString() === "All Launches") {
+      this.setState(prevState => {
+        return { selectedLaunchObjects: prevState.spaceLaunches };
+      });
+    } else {
+      this.state.spaceLaunches.forEach( (launchObject) => {
+       if (launchObject.launch_year === year.toString()) {
+         newSpaceLaunchesObjects.push(launchObject);
+       }
+       return newSpaceLaunchesObjects;
+     });
+     this.setState({ selectedLaunchObjects: newSpaceLaunchesObjects });
+    }
   }
 
 
@@ -91,14 +97,6 @@ class LaunchContainer extends Component {
   }
 
   render () {
-    // console.log("render");
-
-    const years = this.state.spaceLaunches.map(launch => launch.launch_year);
-    // console.log(years);
-    const uniqueYears = years.filter((value, index, self) => {
-      return self.indexOf(value) === index;
-    });
-    // console.log(uniqueYears);
 
     return (
       <div className="container">
@@ -106,7 +104,7 @@ class LaunchContainer extends Component {
         <button onClick={this.handleReloadClick.bind(this)}>Reload</button>
         <button onClick={this.handleSortClick.bind(this)}>Sort</button>
         <LaunchSelect
-        uniqueLaunchYears={ uniqueYears }
+        uniqueLaunchYears={ this.state.yearsInteval }
         onYearSelected={this.handleSelectedYear.bind(this)}/>
         <LaunchList
         spaceLaunches={ this.state.spaceLaunches }
