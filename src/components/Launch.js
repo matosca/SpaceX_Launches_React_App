@@ -11,7 +11,7 @@ class Launch extends Component {
 
     return(
       <div className="launch-item">
-        <h2>#{this.props.flightNumber}</h2>
+        <h1>#{this.props.flightNumber}</h1>
         <h2>{this.props.missionName}</h2>
         <time>{dateLaunchFormatted}</time>
         <h4>{this.props.rocketName}</h4>
