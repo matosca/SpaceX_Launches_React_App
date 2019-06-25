@@ -3,7 +3,9 @@ import Loader from "../assets/svg/loader.svg";
 
 class LaunchLoader extends Component {
   render() {
-    return <img src={Loader} />;
+    return (
+      <img src={Loader} />
+    );
   }
 }
 

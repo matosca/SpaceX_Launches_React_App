@@ -6,6 +6,12 @@ import LaunchLoader from '../components/LaunchLoader';
 class LaunchList extends Component {
   render() {
 
+    if (this.props.loading) {
+      return (
+        <LaunchLoader />
+      );
+    }
+
     const newSelectedLaunches = this.props.selectedSpaceLaunches.map((launch) => {
       return (
         <Launch
@@ -21,7 +27,7 @@ class LaunchList extends Component {
 
     return (
       <div className="launch-list">
-        {newSelectedLaunches}
+        {newSelectedLaunches.length > 0 ? newSelectedLaunches : "No Launches"}
       </div>
     );
   }
