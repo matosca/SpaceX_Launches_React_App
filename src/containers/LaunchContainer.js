@@ -9,20 +9,59 @@ class LaunchContainer extends Component {
     super(props);
     this.state = {
       spaceLaunches: [],
+      yearsInteval: [],
       selectedLaunchObjects: [],
-      descending: false
+      descending: false,
+      loading: false
     };
   }
 
-  componentDidMount() {
+  getLaunchesData() {
+    this.setState({ loading: true });
     axios.get('https://api.spacexdata.com/v3/launches')
       .then(response => {
         const launchesData = response.data;
-        this.setState({
-          spaceLaunches: launchesData
-        });
-        // console.log(response);
+        this.processResponse(launchesData);
+      })
+      .catch(error => {
+        console.log("Error", error);
+        this.setState({ loading: false });
       });
+  }
+
+  processResponse(launchesData) {
+    let years = this.createYearsInterval(launchesData);
+    this.setState({
+      spaceLaunches: launchesData,
+      yearsInteval: years,
+      selectedLaunchObjects: launchesData,
+      loading: false
+    });
+  }
+
+  createYearsInterval(launchesData) {
+    // Get first year of array
+    let firstYearObject = launchesData.slice(0)[0];
+    let firstYearInterval = firstYearObject.launch_year;
+
+    // Get last year of array
+    let lastYearObject = launchesData.slice(-1)[0];
+    let lastYearInterval = lastYearObject.launch_year;
+
+    let years = [];
+    for (let i = parseInt(firstYearInterval); i <= lastYearInterval; i++) {
+      years.push(i);
+    }
+
+    return years;
+  }
+
+  componentDidMount() {
+    this.getLaunchesData();
+  }
+
+  handleReloadClick() {
+    this.getLaunchesData();
   }
 
   handleSelectedYear(year) {
@@ -37,17 +76,6 @@ class LaunchContainer extends Component {
    this.setState({ selectedLaunchObjects: newSpaceLaunchesObjects });
   }
 
-  handleReloadClick() {
-    console.log("click");
-    axios.get('https://api.spacexdata.com/v3/launches')
-      .then(response => {
-        const launchesData = response.data;
-        this.setState({
-          spaceLaunches: launchesData
-        });
-        // console.log(response);
-      });
-  }
 
   handleSortClick() {
     console.log('click for sorting');
