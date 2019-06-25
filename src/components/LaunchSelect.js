@@ -18,7 +18,7 @@ class LaunchSelect extends Component {
     return (
       <select
         className="launch-selector"
-        onChange={(evt) => this.handleSelectChange(evt)}>
+        onChange={(event) => this.handleSelectChange(event)}>
         <option value="All Launches">Filter by Year</option>
           {options}
       </select>
