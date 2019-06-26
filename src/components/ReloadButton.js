@@ -4,7 +4,7 @@ class ReloadButton extends Component {
 
   render() {
     return (
-      <button onClick={this.props.handleReloadClick}>Reload Data</button>
+      <button onClick={this.props.onClick}>Reload Data</button>
     );
   }
 }
