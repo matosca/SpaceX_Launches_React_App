@@ -20,3 +20,8 @@
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
 }
+
+.reload-container button:hover {
+  background-color: #001C4B;
+  color: #fff;
+}

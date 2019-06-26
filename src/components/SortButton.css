@@ -14,3 +14,8 @@ button {
   font-family: 'Brandon Grotesque', Arial, Helvetica, sans-serif;
   padding: 10px;
 }
+
+button:hover {
+  background-color: #001C4B;
+  color: #fff;
+}

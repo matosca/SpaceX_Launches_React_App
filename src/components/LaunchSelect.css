@@ -24,3 +24,8 @@ select {
   padding: 5px 10px;
   padding-right: 35px;
 }
+
+select:hover {
+  background-color: #001C4B;
+  color: #fff;
+}
