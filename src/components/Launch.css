@@ -27,7 +27,7 @@
   font-size: 1.7em;
   font-weight: bold;
   font-style: normal;
-  color: #424242;
+  color: #646464;
 }
 
 .launch-item-number {
@@ -44,6 +44,7 @@
   font-weight: bold;
   font-style: normal;
   font-size: 1.3em;
+  color: #646464;
 }
 
 .launch-item-date {

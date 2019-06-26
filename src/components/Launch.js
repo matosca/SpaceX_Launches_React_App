@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
+import moment from "moment";
 import './Launch.css';
+
 
 class Launch extends Component {
 
   render () {
     const formattedDate = new Date(this.props.launchDate);
-    const options = { day: "2-digit", month: "short", year: "numeric"}
-    const dateLaunchFormatted = formattedDate.toLocaleString("en-GB", options)
+    const dateLaunchFormatted = moment(formattedDate).format("Do MMM YYYY");
 
     return(
       <div className="launch-item">
