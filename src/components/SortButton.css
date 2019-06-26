@@ -7,17 +7,10 @@
   font-style: normal;
 }
 
-.reload-container  {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.reload-container button {
+button {
   background-color:#0C3F75;
   color: #fff;
   font-size: 0.9em;
   font-family: 'Brandon Grotesque', Arial, Helvetica, sans-serif;
   padding: 10px;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
 }

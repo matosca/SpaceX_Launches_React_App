@@ -7,17 +7,19 @@
   font-style: normal;
 }
 
-.reload-container  {
-  display: flex;
-  justify-content: flex-end;
+.launch-selector {
+  margin: 0 10px;
 }
 
-.reload-container button {
+select {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
   background-color:#0C3F75;
   color: #fff;
   font-size: 0.9em;
   font-family: 'Brandon Grotesque', Arial, Helvetica, sans-serif;
   padding: 10px;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
 }

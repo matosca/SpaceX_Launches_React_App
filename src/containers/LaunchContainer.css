@@ -22,3 +22,9 @@
   font-family: 'Brandon Grotesque', Arial, Helvetica, sans-serif;
   color: #424242;
 }
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1em auto;
+}
