@@ -105,10 +105,10 @@ class LaunchContainer extends Component {
       <div className="container">
         <div className="logo-container">
           <LaunchLogo className="logo"/>
-          <h1>Launches</h1>
+          <h1>LAUNCHES</h1>
         </div>
 
-        <ReloadButton
+        <ReloadButton 
           onClick={this.handleReloadClick.bind(this)}/>
 
         <SortButton

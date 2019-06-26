@@ -4,7 +4,7 @@ import LaunchHome from '../assets/img/launch-home.png';
 class LaunchImg extends Component {
   render () {
     return (
-      <img src={LaunchHome} alt=""/>
+      <img src={LaunchHome} alt="" width="350" height="450"/>
     );
   }
 }
