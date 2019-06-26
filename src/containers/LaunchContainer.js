@@ -6,6 +6,7 @@ import ReloadButton from '../components/ReloadButton';
 import SortButton from '../components/SortButton';
 import LaunchLogo from '../components/LaunchLogo';
 import LaunchImg from '../components/LaunchImg';
+import './LaunchContainer.css';
 
 
 class LaunchContainer extends Component {
@@ -103,7 +104,7 @@ class LaunchContainer extends Component {
     return (
       <div className="container">
         <div className="logo-container">
-          <LaunchLogo />
+          <LaunchLogo className="logo"/>
           <h1>Launches</h1>
         </div>
 
@@ -118,13 +119,12 @@ class LaunchContainer extends Component {
           uniqueLaunchYears={ this.state.yearsInteval }
           onYearSelected={this.handleSelectedYear.bind(this)}/>
 
-        <div>
+        <div className="list-img-container">
           <LaunchImg />
           <LaunchList
             loading={this.state.loading}
             selectedSpaceLaunches= {this.state.selectedLaunchObjects}/>
         </div>
-
       </div>
     );
   }
