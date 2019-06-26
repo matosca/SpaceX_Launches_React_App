@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'Brandon Grotesque';
-  src: url('../assets/font/BrandonGrotesque-Medium.woff2') format('woff2'),
-      url('../assets/font/BrandonGrotesque-Medium.woff') format('woff'),
-      url('../assets/font/BrandonGrotesque-Medium.ttf') format('truetype');
-  font-weight: 900;
+  src: url('../assets/font/BrandonGrotesque-Regular.woff2') format('woff2'),
+      url('../assets/font/BrandonGrotesque-Regular.woff') format('woff'),
+      url('../assets/font/BrandonGrotesque-Regular.ttf') format('truetype');
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -25,12 +25,13 @@
   flex-direction: row;
   align-items: center;
   font-size: 1.7em;
-  font-weight: bold;
+  font-weight: normal;
   font-style: normal;
   color: #646464;
 }
 
 .launch-item-number {
+  font-size: 1.5em;
   margin-left: 1em;
   margin-right: 2.5em;
 }

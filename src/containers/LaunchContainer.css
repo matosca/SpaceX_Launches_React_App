@@ -22,11 +22,12 @@
 }
 
 .logo-container div {
-  font-size: 1em;
-  font-weight: lighter;
+  font-size: 1.2em;
+  font-weight: normal;
   letter-spacing: 0.1em;
   font-family: 'Brandon Grotesque', Arial, Helvetica, sans-serif;
   color: #424242;
+  padding-top: 0.5em;
 }
 
 .btn-container {
