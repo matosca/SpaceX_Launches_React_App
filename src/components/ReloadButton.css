@@ -8,8 +8,7 @@
 }
 
 .reload-container  {
-  display: flex;
-  justify-content: flex-end;
+  padding: 1em 0;
 }
 
 .reload-container button {
