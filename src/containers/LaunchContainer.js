@@ -102,14 +102,15 @@ class LaunchContainer extends Component {
 
   render () {
     return (
-      <div className="container">
+      <div className="main-container">
+      <div className="header-container">
         <div className="logo-container">
           <LaunchLogo className="logo"/>
-          <h1>LAUNCHES</h1>
-        </div>
-
-        <ReloadButton
-          onClick={this.handleReloadClick.bind(this)}/>
+          <div>LAUNCHES</div>
+          </div>
+          <ReloadButton
+            onClick={this.handleReloadClick.bind(this)}/>
+      </div>
 
         <div className="btn-container">
           <LaunchSelect
