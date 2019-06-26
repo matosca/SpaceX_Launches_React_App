@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import LaunchHome from '../assets/img/launch-home.png';
+import LaunchHome from '../assets/img/launch-home@3x.png';
+import './LaunchImg.css';
 
 class LaunchImg extends Component {
   render () {
     return (
-      <img src={LaunchHome} alt="" width="350" height="450"/>
+      <div className="home-img">
+        <img src={LaunchHome} alt="" width="450" height="575"/>
+      </div>
     );
   }
 }

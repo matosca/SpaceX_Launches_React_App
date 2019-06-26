@@ -1,0 +1,6 @@
+.home-img img {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  padding-top: 4em;
+}
