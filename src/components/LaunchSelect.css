@@ -17,9 +17,10 @@ select {
   -moz-appearance: none;
   appearance: none;
   border-radius: 0;
-  background-color:#0C3F75;
+  background: #0C3F75 url("../assets/icon/select.png") no-repeat 89% 50%;
   color: #fff;
   font-size: 0.9em;
   font-family: 'Brandon Grotesque', Arial, Helvetica, sans-serif;
-  padding: 10px;
+  padding: 5px 10px;
+  padding-right: 35px;
 }
