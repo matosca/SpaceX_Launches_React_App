@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
+import RefreshIcon from '../assets/icon/refresh@2x.png';
+import './ReloadButton.css';
 
 class ReloadButton extends Component {
 
   render() {
     return (
-      <button onClick={this.props.onClick}>Reload Data</button>
+      <div className="reload-container">
+        <button onClick={this.props.onClick}>Reload Data  <img src={RefreshIcon} alt="" width="10" height="11"/></button>
+      </div>
+
     );
   }
 }

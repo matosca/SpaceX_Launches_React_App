@@ -108,16 +108,16 @@ class LaunchContainer extends Component {
           <h1>LAUNCHES</h1>
         </div>
 
-        <ReloadButton 
+        <ReloadButton
           onClick={this.handleReloadClick.bind(this)}/>
-
-        <SortButton
-          onClick={this.handleSortClick.bind(this)}
-          updatingContent={this.state.descending ? "Ascending" : "Descending"}/>
 
         <LaunchSelect
           uniqueLaunchYears={ this.state.yearsInteval }
           onYearSelected={this.handleSelectedYear.bind(this)}/>
+
+        <SortButton
+          onClick={this.handleSortClick.bind(this)}
+          updatingContent={this.state.descending ? "Ascending" : "Descending"}/>
 
         <div className="list-img-container">
           <LaunchImg />
