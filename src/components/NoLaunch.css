@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url('../assets/font/BrandonGrotesque-Medium.woff2') format('woff2'),
+      url('../assets/font/BrandonGrotesque-Medium.woff') format('woff'),
+      url('../assets/font/BrandonGrotesque-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.no-launch-item {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.7em;
+  font-weight: bold;
+  font-style: normal;
+  color: #646464;
+  margin: 5em 10em;
+}

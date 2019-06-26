@@ -7,7 +7,7 @@ class ReloadButton extends Component {
   render() {
     return (
       <div className="reload-container">
-        <button onClick={this.props.onClick}>Reload Data  <img src={RefreshIcon} alt="" width="10" height="11"/></button>
+        <button onClick={this.props.onClick}>Reload Data  <img src={RefreshIcon} alt="Loading arrow icon" width="10" height="11"/></button>
       </div>
 
     );

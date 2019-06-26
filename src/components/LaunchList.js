@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Launch from '../components/Launch';
 import './LaunchList.css';
 import LaunchLoader from '../components/LaunchLoader';
+import NoLaunch from '../components/NoLaunch';
 
 class LaunchList extends Component {
   render() {
@@ -27,7 +28,7 @@ class LaunchList extends Component {
 
     return (
       <div className="launch-list">
-        {newSelectedLaunches.length > 0 ? newSelectedLaunches : "No Launches"}
+        {newSelectedLaunches.length > 0 ? newSelectedLaunches : <NoLaunch/>}
       </div>
     );
   }

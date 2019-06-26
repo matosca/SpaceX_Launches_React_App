@@ -6,7 +6,7 @@ class LaunchImg extends Component {
   render () {
     return (
       <div className="home-img">
-        <img src={LaunchHome} alt="" width="450" height="575"/>
+        <img src={LaunchHome} alt="Space rocket launching" width="450" height="575"/>
       </div>
     );
   }

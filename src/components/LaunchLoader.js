@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import Loader from "../assets/svg/loader.svg";
+import './LaunchLoader.css';
 
 class LaunchLoader extends Component {
   render() {
     return (
-      <img src={Loader} alt=""/>
+      <div className="loading-img">
+        <img src={Loader} alt="Animated loading icon"/>
+      </div>
     );
   }
 }
