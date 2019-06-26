@@ -4,6 +4,9 @@ import LaunchList from '../components/LaunchList';
 import LaunchSelect from '../components/LaunchSelect';
 import ReloadButton from '../components/ReloadButton';
 import SortButton from '../components/SortButton';
+import LaunchLogo from '../components/LaunchLogo';
+import LaunchImg from '../components/LaunchImg';
+
 
 class LaunchContainer extends Component {
 
@@ -99,17 +102,29 @@ class LaunchContainer extends Component {
   render () {
     return (
       <div className="container">
-        <h1>Launches</h1>
-        <ReloadButton onClick={this.handleReloadClick.bind(this)}/>
+        <div className="logo-container">
+          <LaunchLogo />
+          <h1>Launches</h1>
+        </div>
+
+        <ReloadButton
+          onClick={this.handleReloadClick.bind(this)}/>
+
         <SortButton
-        onClick={this.handleSortClick.bind(this)}
-        updatingContent={this.state.descending ? "Ascending" : "Descending"}/>
+          onClick={this.handleSortClick.bind(this)}
+          updatingContent={this.state.descending ? "Ascending" : "Descending"}/>
+
         <LaunchSelect
-        uniqueLaunchYears={ this.state.yearsInteval }
-        onYearSelected={this.handleSelectedYear.bind(this)}/>
-        <LaunchList
-        loading={this.state.loading}
-        selectedSpaceLaunches= {this.state.selectedLaunchObjects}/>
+          uniqueLaunchYears={ this.state.yearsInteval }
+          onYearSelected={this.handleSelectedYear.bind(this)}/>
+
+        <div>
+          <LaunchImg />
+          <LaunchList
+            loading={this.state.loading}
+            selectedSpaceLaunches= {this.state.selectedLaunchObjects}/>
+        </div>
+
       </div>
     );
   }
