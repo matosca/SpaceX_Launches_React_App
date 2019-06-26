@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Launch.css';
 
 class Launch extends Component {
-  
+
   render () {
     const formattedDate = new Date(this.props.launchDate);
     const options = { day: "2-digit", month: "short", year: "numeric"}
@@ -10,10 +10,14 @@ class Launch extends Component {
 
     return(
       <div className="launch-item">
-        <h1>#{this.props.flightNumber}</h1>
-        <h2>{this.props.missionName}</h2>
-        <time>{dateLaunchFormatted}</time>
-        <h4>{this.props.rocketName}</h4>
+        <div className="launch-item-left">
+          <div className="launch-item-number">#{this.props.flightNumber}</div>
+          <div className="launch-item-name">{this.props.missionName}</div>
+        </div>
+        <div className="launch-item-right">
+          <div className="launch-item-date">{dateLaunchFormatted}</div>
+          <div className="launch-item-rocket">{this.props.rocketName}</div>
+        </div>
       </div>
     );
   }
