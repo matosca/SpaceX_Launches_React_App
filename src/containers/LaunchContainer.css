@@ -42,5 +42,6 @@
 .list-img-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin: auto 1.5em;
 }
