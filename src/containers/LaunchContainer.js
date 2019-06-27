@@ -67,6 +67,7 @@ class LaunchContainer extends Component {
   }
 
   handleReloadClick() {
+    this.setState({ yearsInteval: [] });
     this.getLaunchesData();
   }
 
