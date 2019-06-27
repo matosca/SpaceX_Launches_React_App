@@ -7,7 +7,7 @@ class SortButton extends Component {
   render() {
 
     return (
-      <button onClick={ this.props.onClick}>Sort {this.props.updatingContent} <img src={SortIcon} alt="Sorting arrows up and down" width="12" height="16"/></button>
+      <button onClick={ this.props.onClick}>Sort {this.props.updatingContent} <img src={SortIcon} alt="Sorting arrows up and down" width="13" height="17"/></button>
     );
   }
 }

@@ -17,12 +17,14 @@ select {
   -moz-appearance: none;
   appearance: none;
   border-radius: 0;
-  background: #0C3F75 url("../assets/icon/select.png") no-repeat 89% 50%;
+  background: rgba(12, 63, 117, 0.9) url("../assets/icon/select.png") no-repeat 89% 50%;
   color: #fff;
-  font-size: 0.9em;
+  font-size: 1em;
+  font-weight: bold;
   font-family: 'Brandon Grotesque', Arial, Helvetica, sans-serif;
-  padding: 5px 10px;
-  padding-right: 35px;
+  padding: 5px 0px;
+  padding-right: 40px;
+  padding-left: 15px;
 }
 
 select:hover {

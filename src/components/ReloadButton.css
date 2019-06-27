@@ -12,13 +12,20 @@
 }
 
 .reload-container button {
-  background-color:#0C3F75;
+  background-color: rgba(12, 63, 117, 0.9);
   color: #fff;
-  font-size: 0.9em;
+  font-size: 1em;
   font-family: 'Brandon Grotesque', Arial, Helvetica, sans-serif;
-  padding: 10px;
+  font-weight: bold;
+  padding: 9px 0px;
+  padding-right: 1.2em;
+  padding-left: 1.2em;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
+}
+
+.reload-container button img {
+  margin-left: 10px;
 }
 
 .reload-container button:hover {

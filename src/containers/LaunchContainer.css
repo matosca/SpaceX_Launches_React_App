@@ -33,12 +33,12 @@
 .btn-container {
   display: flex;
   justify-content: flex-end;
-  margin: 1.5em 1.5em 0;
+  margin: 1.5em 4.5em 0;
 }
 
 .list-img-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: auto 1.5em;
+  margin: auto 4.5em;
 }
