@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url('../assets/font/BrandonGrotesque-Bold.woff2') format('woff2'),
+      url('../assets/font/BrandonGrotesque-Bold.woff') format('woff'),
+      url('../assets/font/BrandonGrotesque-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.launch-selector {
+  margin: 0 10px;
+}
+
+select {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  background: rgba(12, 63, 117, 0.9) url("../assets/icon/select.png") no-repeat 89% 50%;
+  color: #fff;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: 'Brandon Grotesque', Arial, Helvetica, sans-serif;
+  padding: 5px 0px;
+  padding-right: 40px;
+  padding-left: 15px;
+}
+
+select:hover {
+  background-color: #001C4B;
+  color: #fff;
+}

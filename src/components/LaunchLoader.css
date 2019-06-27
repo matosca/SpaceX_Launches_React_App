@@ -1,0 +1,7 @@
+.loading-img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.5em;
+  margin: auto 14em;
+}
