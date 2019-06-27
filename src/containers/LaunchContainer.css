@@ -40,5 +40,5 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: auto 4.5em;
+  margin: auto 4.5em auto 2.5em;
 }
